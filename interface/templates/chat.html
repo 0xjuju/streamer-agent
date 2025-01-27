@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .chat-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .messages {
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message.user {
+      text-align: right;
+      color: blue;
+    }
+    .message.bot {
+      text-align: left;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="messages" id="messages"></div>
+    <input type="text" id="userInput" placeholder="Type your message here" />
+    <button id="sendButton">Send</button>
+  </div>
+
+  <script>
+    const sendButton = document.getElementById("sendButton");
+    const userInput = document.getElementById("userInput");
+    const messagesDiv = document.getElementById("messages");
+
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message", sender);
+      messageDiv.textContent = text;
+      messagesDiv.appendChild(messageDiv);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      // Add user message to chat
+      addMessage(text, "user");
+
+      // Send to backend
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+
+      if (response.ok) {
+        const { reply } = await response.json();
+        addMessage(reply, "bot");
+
+        // Trigger voice response
+        const utterance = new SpeechSynthesisUtterance(reply);
+        window.speechSynthesis.speak(utterance);
+      } else {
+        addMessage("Error: Failed to get response", "bot");
+      }
+
+      userInput.value = "";
+    }
+
+    sendButton.addEventListener("click", sendMessage);
+    userInput.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") sendMessage();
+    });
+  </script>
+</body>
+</html>
