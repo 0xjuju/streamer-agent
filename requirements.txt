@@ -20,7 +20,6 @@ jiter==0.8.2
 openai==1.59.9
 packaging==24.2
 psycopg2==2.9.10
-PyAudio==0.2.14
 pydantic==2.10.5
 pydantic_core==2.27.2
 python-decouple==3.8
