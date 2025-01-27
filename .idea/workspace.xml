@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b43ad09f-1fac-4ddf-bd1f-89be81675b6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_to_speech/azure_speech_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_to_speech/azure_speech_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <recent name="$PROJECT_DIR$/framework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.agents">
+  <component name="RunManager" selected="Python.azure_speech_api">
     <configuration name="agents" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="streamer" />
       <option name="ENV_FILES" value="" />
@@ -124,9 +122,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.azure_speech_api" />
         <item itemvalue="Python.agents" />
         <item itemvalue="Python.converter" />
-        <item itemvalue="Python.azure_speech_api" />
       </list>
     </recent_temporary>
   </component>

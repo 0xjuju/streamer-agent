@@ -15,13 +15,22 @@ speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, au
 text = """
 <speak xmlns="http://www.w3.org/2001/10/synthesis" version="1.0" xml:lang="en-US">
   <voice name="en-US-DustinMultilingualNeural"> 
-     <prosody pitch="+20%" rate="fast" volume="+85%">Ha ha ha! hee hee heeheeheeheeeeeeee That’s hilarious!</prosody>
-    <prosody pitch="+10%" rate="medium">Hee hee hee... Oh, stop it!</prosody>
+    WOW!! That's a good dad joke!!
+    <prosody pitch="+100Hz" rate="fast" volume="loud" contour="(0%,+10Hz) (50%,+20Hz) (100%,-10Hz)">
+        Ha ha ha ha!
+    </prosody>
+    <prosody pitch="-50Hz" range="x-low" volume="soft" rate="medium">
+        Ho ho ho...
+    </prosody>
+    
+     
   </voice>
 </speak>
 """
 
 # <prosody pitch="-15%" rate="55%" volume="+20%">Look how they massacred my boy!</prosody>
+# <prosody pitch="+20%" rate="fast" volume="+85%">Ha ha ha! hee hee heeheeheeheeeeeeee That’s hilarious!</prosody>
+#     <prosody pitch="+10%" rate="medium">Hee hee hee... Oh, stop it!</prosody>
 
 speech_synthesis_result = speech_synthesizer.speak_ssml_async(text).get()
 
