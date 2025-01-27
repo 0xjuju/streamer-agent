@@ -13,15 +13,10 @@ speech_config.speech_synthesis_voice_name='en-US-DustinMultilingualNeural'
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
 text = """
-<speak xmlns="http://www.w3.org/2001/10/synthesis" version="1.0" xml:lang="en-US">
+<speak xmlns="http://www.w3.org/2001/10/synthesis" version="1.0" xml:lang="en-US" xmlns:mstts="https://www.w3.org/2001/mstts">
   <voice name="en-US-DustinMultilingualNeural"> 
     WOW!! That's a good dad joke!!
-    <prosody pitch="+100Hz" rate="fast" volume="loud" contour="(0%,+10Hz) (50%,+20Hz) (100%,-10Hz)">
-        Ha ha ha ha!
-    </prosody>
-    <prosody pitch="-50Hz" range="x-low" volume="soft" rate="medium">
-        Ho ho ho...
-    </prosody>
+    <mstts:express-as style="cheerful">Ha ha ha! That's so funny!</mstts:express-as>
     
      
   </voice>
