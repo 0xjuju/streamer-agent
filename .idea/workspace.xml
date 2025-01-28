@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b43ad09f-1fac-4ddf-bd1f-89be81675b6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Aptfile" beforeDir="false" afterPath="$PROJECT_DIR$/Aptfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alsa.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +41,13 @@
     "Python.converter.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/jermoljupiter/PycharmProjects/streamer/text_to_speech"
+    "last_opened_file_path": "/Users/jermoljupiter/PycharmProjects/streamer"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/text_to_speech" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/text_to_speech" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/framework" />
