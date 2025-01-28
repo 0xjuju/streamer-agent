@@ -1,3 +1,4 @@
 libasound2-data
 libasound2-plugins
 alsa-utils
+alsa-lib
